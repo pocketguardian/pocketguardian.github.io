@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pocket Guardian — Silent Device Security Monitor for Android</title>
+  <meta name="description" content="Pocket Guardian silently captures an intruder selfie the moment someone touches your Android phone. 11 triggers: wrong PIN, SIM swap, charger unplugged, device pickup and more. No sound, no flash — they never know. Free on Google Play." />
+  <meta name="keywords" content="phone security app android, intruder selfie app, android anti-theft, wrong PIN photo, SIM swap detection, silent camera security, device monitor android, catch phone thief, lock screen photo, unauthorized access detector, free security app android" />
+  <link rel="canonical" href="https://pocketguardian.github.io/pocketguardian/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pocket Guardian — Silent Device Security Monitor" />
+  <meta property="og:description" content="11 photo triggers. Silent selfie. No flash. No notification. The intruder never knows." />
+  <meta property="og:url" content="https://pocketguardian.github.io/pocketguardian/" />
+  <meta property="og:image" content="assets/img/og-cover.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pocket Guardian — Silent Device Security Monitor" />
+  <meta name="twitter:description" content="11 photo triggers. Silent selfie. No flash. No notification." />
+
+  <!-- Mobile browser chrome color -->
+  <meta name="theme-color" content="#080c10" />
+  <!-- Disable iOS auto-detection of phone numbers/emails -->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- iOS web app capable -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Pocket Guardian home">
+        <img src="assets/img/logo.png" alt="Pocket Guardian logo" width="34" height="34" onerror="this.style.display='none'" />
+        Pocket<span class="accent">Guardian</span>
+      </a>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.pocketguardian.app"
+        class="nav__cta"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Get Pocket Guardian on Google Play"
+      >
+        <svg width="14" height="14" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true">
+      <polygon points="3,1 17,9 3,17"/>
+    </svg>
+        Get on Google Play
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero__inner">
+
+      <div class="hero__badge" role="status">
+        Security Monitor · Android 8.0+
+      </div>
+
+      <h1 class="hero__title" id="hero-title">
+        Your phone is being watched. By <em>you</em>.
+      </h1>
+
+      <p class="hero__sub">
+        Pocket Guardian silently captures a photo the moment
+        someone touches your device without permission.
+        No sound. No flash. No notification.
+        The intruder never knows.
+      </p>
+
+      <div class="hero__actions">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.pocketguardian.app"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Pocket Guardian on Google Play — free"
+        >
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true">
+          <polygon points="3,1 17,9 3,17"/>
+        </svg>
+          Free on Google Play
+        </a>
+        <a href="#features" class="btn-secondary">
+          See features
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+      </div>
+
+      <div class="hero__stats" role="list" aria-label="App statistics">
+        <div class="hero__stat" role="listitem">
+          <strong>11</strong>
+          <span>Photo triggers</span>
+        </div>
+        <div class="hero__divider" role="separator" aria-hidden="true"></div>
+        <div class="hero__stat" role="listitem">
+          <strong>0</strong>
+          <span>Permissions required<br/>for motion sensor</span>
+        </div>
+        <div class="hero__divider" role="separator" aria-hidden="true"></div>
+        <div class="hero__stat" role="listitem">
+          <strong>Free</strong>
+          <span>Core features</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     TRIGGERS (photo events)
+════════════════════════════════════════════════════════════ -->
+<section class="triggers" id="triggers" aria-labelledby="triggers-title">
+  <div class="container">
+    <header class="triggers__header fade-up">
+      <p class="section-label">Photo Triggers</p>
+      <h2 class="section-title" id="triggers-title">11 events. Every one captured.</h2>
+      <p class="section-body" style="margin:0 auto;">
+        Each trigger has its own independent log switch and photo switch.
+        Log without shooting, or shoot without logging — your call.
+      </p>
+    </header>
+
+    <ul class="triggers__grid" role="list">
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">🔐</div>
+        <div>
+          <p class="trigger-name">Wrong PIN on lock screen</p>
+          <p class="trigger-desc">Silent selfie the moment an incorrect PIN, pattern, or password is entered</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 1">①</span>
+      </li>
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">📡</div>
+        <div>
+          <p class="trigger-name">SIM removed / inserted</p>
+          <p class="trigger-desc">Photo on any SIM card state change — removal, insertion, or lock</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 2">②</span>
+      </li>
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">🔄</div>
+        <div>
+          <p class="trigger-name">SIM carrier changed</p>
+          <p class="trigger-desc">Detects SIM swap attacks — catches theft before you notice</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 3">③</span>
+      </li>
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">📱</div>
+        <div>
+          <p class="trigger-name">Phone picked up while locked</p>
+          <p class="trigger-desc">Screen turned on while locked — photo before any PIN is entered</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 4">④</span>
+      </li>
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">📳</div>
+        <div>
+          <p class="trigger-name">Device pickup (motion sensor)</p>
+          <p class="trigger-desc">Hardware motion sensor detects physical movement from a stationary position</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 5">⑤</span>
+      </li>
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">🔌</div>
+        <div>
+          <p class="trigger-name">Charger disconnected</p>
+          <p class="trigger-desc">Instant photo when unplugged from outlet or power bank</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 6">⑥</span>
+      </li>
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">🔓</div>
+        <div>
+          <p class="trigger-name">Successful unlock</p>
+          <p class="trigger-desc">Who opened your phone and exactly when — even with fingerprint</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 7">⑦</span>
+      </li>
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">⚡</div>
+        <div>
+          <p class="trigger-name">Charger connected</p>
+          <p class="trigger-desc">Silent photo when a charger is plugged in</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 8">⑧</span>
+      </li>
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">🎧</div>
+        <div>
+          <p class="trigger-name">Headset connected / disconnected</p>
+          <p class="trigger-desc">Photo on any headset or earphone change via 3.5mm or USB-C</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 9">⑨</span>
+      </li>
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">🛡</div>
+        <div>
+          <p class="trigger-name">Wrong PIN in app</p>
+          <p class="trigger-desc">Catch anyone trying to break into the Pocket Guardian app itself</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 10">⑩</span>
+      </li>
+
+      <li class="trigger-card fade-up" role="listitem">
+        <div class="trigger-icon" aria-hidden="true">📋</div>
+        <div>
+          <p class="trigger-name">Successful app login</p>
+          <p class="trigger-desc">Full audit trail of who accessed your security app and when</p>
+        </div>
+        <span class="trigger-rank" aria-label="Rank 11">⑪</span>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FEATURES
+════════════════════════════════════════════════════════════ -->
+<section class="features" id="features" aria-labelledby="features-title">
+  <div class="container">
+    <div class="features__layout">
+
+      <div>
+        <p class="section-label">Key Features</p>
+        <h2 class="section-title" id="features-title">
+          Built for the edge cases<br />other apps ignore.
+        </h2>
+        <p class="section-body">
+          Device Administrator access, 24/7 watchdog service, and a complete
+          event log with photos — designed to survive aggressive battery
+          management on Xiaomi, Samsung, and every Android in between.
+        </p>
+      </div>
+
+      <ul class="features__cards" role="list">
+
+        <li class="feature-card fade-up" role="listitem">
+          <div class="feature-card__head">
+            <div class="feature-card__icon" aria-hidden="true">🛡</div>
+            <h3 class="feature-card__title">Device Administrator</h3>
+          </div>
+          <p class="feature-card__body">
+            Intercepts wrong PINs directly on the Android lock screen via the
+            standard DeviceAdminReceiver API. Works even when fingerprint or
+            Face ID is active.
+          </p>
+        </li>
+
+        <li class="feature-card fade-up" role="listitem">
+          <div class="feature-card__head">
+            <div class="feature-card__icon" aria-hidden="true">👁</div>
+            <h3 class="feature-card__title">Watchdog 24/7</h3>
+          </div>
+          <p class="feature-card__body">
+            AlarmManager-based heartbeat checks every 5 minutes. Survives forced
+            kills, Doze mode, battery optimization, and reboots. Tested on
+            Xiaomi HyperOS.
+          </p>
+        </li>
+
+        <li class="feature-card fade-up" role="listitem">
+          <div class="feature-card__head">
+            <div class="feature-card__icon" aria-hidden="true">📷</div>
+            <h3 class="feature-card__title">Choose your camera</h3>
+          </div>
+          <p class="feature-card__body">
+            Front camera to capture the intruder's face, or rear camera to
+            document the surrounding environment. Your choice, globally in
+            Settings.
+          </p>
+        </li>
+
+        <li class="feature-card fade-up" role="listitem">
+          <div class="feature-card__head">
+            <div class="feature-card__icon" aria-hidden="true">🏷</div>
+            <h3 class="feature-card__title">Photo overlays</h3>
+          </div>
+          <p class="feature-card__body">
+            Burn date/time, device model, and Android ID directly onto each
+            photo at capture time. Useful evidence when reviewing Drive backups.
+          </p>
+        </li>
+
+        <li class="feature-card fade-up" role="listitem">
+          <div class="feature-card__head">
+            <div class="feature-card__icon" aria-hidden="true">📊</div>
+            <h3 class="feature-card__title">Statistics &amp; filters</h3>
+          </div>
+          <p class="feature-card__body">
+            Filter the event log by type and date range. Statistics screen shows
+            bar charts by day, hourly activity, and a breakdown by event type.
+          </p>
+        </li>
+
+        <li class="feature-card fade-up" role="listitem">
+          <div class="feature-card__head">
+            <div class="feature-card__icon" aria-hidden="true">🔑</div>
+            <h3 class="feature-card__title">PBKDF2 PIN protection</h3>
+          </div>
+          <p class="feature-card__body">
+            Your PIN is never stored in plain text. Military-grade PBKDF2-HMAC
+            key derivation with a random 16-byte salt. Secret recovery question
+            as a fallback.
+          </p>
+        </li>
+
+        <li class="feature-card fade-up" role="listitem">
+          <div class="feature-card__head">
+            <div class="feature-card__icon" aria-hidden="true">☁</div>
+            <h3 class="feature-card__title">
+              Google Drive backup
+              <span class="badge-premium">Premium</span>
+            </h3>
+          </div>
+          <p class="feature-card__body">
+            Photos and event log synced after every event. Data is safely stored
+            on your own Google Drive — even if the phone is lost, stolen, or
+            factory reset.
+          </p>
+        </li>
+
+        <li class="feature-card fade-up" role="listitem">
+          <div class="feature-card__head">
+            <div class="feature-card__icon" aria-hidden="true">🔔</div>
+            <h3 class="feature-card__title">
+              Alarm mode
+              <span class="badge-premium">Premium</span>
+            </h3>
+          </div>
+          <p class="feature-card__body">
+            Full-volume ringtone on any event. Stops only when you open the app.
+            An audible deterrent that discourages further access attempts.
+          </p>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     PHOTO QUALITY
+════════════════════════════════════════════════════════════ -->
+<section class="quality" aria-labelledby="quality-title">
+  <div class="container">
+    <p class="section-label">Photo Quality</p>
+    <h2 class="section-title" id="quality-title">Three modes for every need.</h2>
+    <p class="section-body">
+      Choose between compact files for fast sync or maximum resolution
+      for clear evidence. Switch at any time in Settings.
+    </p>
+
+    <div class="quality__grid">
+
+      <article class="quality-card fade-up" aria-label="Eco quality mode">
+        <p class="quality-card__name">Eco</p>
+        <p class="quality-card__sub">
+          Smallest file size. Ideal for slow or expensive mobile data and
+          limited storage. Syncs to Drive in seconds even on 3G.
+        </p>
+        <div class="quality-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" aria-label="Quality level: low">
+          <div class="quality-bar__fill" style="width:33%"></div>
+        </div>
+      </article>
+
+      <article class="quality-card quality-card--recommended fade-up" aria-label="High quality mode (default)">
+        <p class="quality-card__name">High</p>
+        <p class="quality-card__sub">
+          Maximum resolution and sharpness. Clear evidence when you need
+          to identify a face or share with authorities.
+        </p>
+        <div class="quality-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Quality level: high">
+          <div class="quality-bar__fill" style="width:100%"></div>
+        </div>
+      </article>
+
+      <article class="quality-card fade-up" aria-label="Standard quality mode">
+        <p class="quality-card__name">Standard</p>
+        <p class="quality-card__sub">
+          Balanced quality and file size. Face clearly visible,
+          instant sync. Good all-round choice for daily monitoring.
+        </p>
+        <div class="quality-bar" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" aria-label="Quality level: medium">
+          <div class="quality-bar__fill" style="width:66%"></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SCREENSHOTS
+════════════════════════════════════════════════════════════ -->
+<section class="screenshots" id="screenshots" aria-labelledby="screenshots-title">
+  <div class="container">
+    <header class="screenshots__header fade-up">
+      <p class="section-label">App Screenshots</p>
+      <h2 class="section-title" id="screenshots-title">See what's inside.</h2>
+      <p class="section-body" style="margin:0 auto;">
+        Clean, dark interface designed to stay out of the way
+        and let your security data speak for itself.
+      </p>
+    </header>
+
+    <div class="screenshots__grid" role="list" aria-label="App screenshots">
+
+      <figure class="screenshot-card fade-up" role="listitem" aria-label="Screenshot 1: Settings">
+        <img
+          src="assets/img/1.jpg"
+          alt="Pocket Guardian settings screen showing event toggles and photo options"
+          width="220"
+          height="auto"
+          loading="lazy"
+        />
+        <figcaption class="screenshot-card__label">Settings</figcaption>
+      </figure>
+
+      <figure class="screenshot-card fade-up" role="listitem" aria-label="Screenshot 2: PIN Login">
+        <img
+          src="assets/img/2.jpg"
+          alt="Pocket Guardian PIN login screen for secure app access"
+          width="220"
+          height="auto"
+          loading="lazy"
+        />
+        <figcaption class="screenshot-card__label">PIN Login</figcaption>
+      </figure>
+
+      <figure class="screenshot-card fade-up" role="listitem" aria-label="Screenshot 3: Statistics">
+        <img
+          src="assets/img/3.jpg"
+          alt="Pocket Guardian statistics screen with event charts by day and type"
+          width="220"
+          height="auto"
+          loading="lazy"
+        />
+        <figcaption class="screenshot-card__label">Statistics</figcaption>
+      </figure>
+
+      <figure class="screenshot-card fade-up" role="listitem" aria-label="Screenshot 4: Event Log">
+        <img
+          src="assets/img/4.jpg"
+          alt="Pocket Guardian event log showing security events with photos and filter panel"
+          width="220"
+          height="auto"
+          loading="lazy"
+        />
+        <figcaption class="screenshot-card__label">Event Log</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     PRIVACY
+════════════════════════════════════════════════════════════ -->
+<section class="privacy" id="privacy" aria-labelledby="privacy-title">
+  <div class="container">
+    <div class="privacy__inner fade-up">
+      <div class="privacy__icon" aria-hidden="true">🔒</div>
+
+      <p class="section-label" style="justify-content:center;">
+        Privacy First
+      </p>
+      <h2 class="section-title" id="privacy-title">
+        Your data stays with you.
+      </h2>
+      <p class="section-body" style="margin:0 auto 0;">
+        Zero data sent to our servers. Ever. We don't run a backend.
+        We have no access to your photos, logs, or PIN.
+      </p>
+
+      <ul class="privacy__points" role="list" aria-label="Privacy guarantees">
+        <li class="privacy__point" role="listitem">
+          All photos and event logs stored <strong>locally on your device only</strong>,
+          in Android's private app sandbox
+        </li>
+        <li class="privacy__point" role="listitem">
+          Optional Google Drive backup goes directly to <strong>your own Google account</strong>
+          — the developer has no access
+        </li>
+        <li class="privacy__point" role="listitem">
+          Firebase Crashlytics collects only <strong>anonymous crash data</strong>
+          — no photos, no logs, no PIN
+        </li>
+        <li class="privacy__point" role="listitem">
+          <strong>No ads. No tracking. No account required.</strong>
+          Core features are entirely free.
+        </li>
+        <li class="privacy__point" role="listitem">
+          GDPR and CCPA compliant. Full policy available for review.
+        </li>
+      </ul>
+
+      <a href="privacy-policy.md" class="privacy__link">
+        Read the full Privacy Policy
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     REAL SCENARIOS
+════════════════════════════════════════════════════════════ -->
+<section class="scenarios" id="scenarios" aria-labelledby="scenarios-title">
+  <div class="container">
+    <header class="scenarios__header fade-up">
+      <p class="section-label">Real scenarios</p>
+      <h2 class="section-title" id="scenarios-title">
+        Every situation. Silently covered.
+      </h2>
+      <p class="section-body" style="margin:0 auto;">
+        Pocket Guardian works in the background so you always know
+        what happened to your phone — even while you were away.
+      </p>
+    </header>
+
+    <div class="scenarios__grid">
+
+      <article class="scenario-card fade-up">
+        <div class="scenario-card__icon">☕</div>
+        <h3 class="scenario-card__title">Left at a café</h3>
+        <p class="scenario-card__body">
+          You stepped away for a minute. Someone picked it up and tried
+          your PIN. Pocket Guardian captured their face, the wrong PIN
+          attempt, and the exact time — all before you got back.
+        </p>
+        <div class="scenario-card__triggers">
+          <span class="trigger-tag">Wrong PIN</span>
+          <span class="trigger-tag">Device pickup</span>
+        </div>
+      </article>
+
+      <article class="scenario-card fade-up">
+        <div class="scenario-card__icon">🏨</div>
+        <h3 class="scenario-card__title">Hotel room theft</h3>
+        <p class="scenario-card__body">
+          Phone left on the nightstand. SIM card removed and replaced.
+          Pocket Guardian photographed the thief the moment the tray
+          was ejected — before they could do anything else.
+        </p>
+        <div class="scenario-card__triggers">
+          <span class="trigger-tag">SIM removed</span>
+          <span class="trigger-tag">SIM swap</span>
+        </div>
+      </article>
+
+      <article class="scenario-card fade-up">
+        <div class="scenario-card__icon">✈️</div>
+        <h3 class="scenario-card__title">Airport charging station</h3>
+        <p class="scenario-card__body">
+          Plugged in and walked away. Someone unplugged your phone to
+          take it. The charger disconnect fired instantly — photo taken,
+          event logged, timestamped to the second.
+        </p>
+        <div class="scenario-card__triggers">
+          <span class="trigger-tag">Charger disconnected</span>
+        </div>
+      </article>
+
+      <article class="scenario-card fade-up">
+        <div class="scenario-card__icon">🏢</div>
+        <h3 class="scenario-card__title">Office desk snoop</h3>
+        <p class="scenario-card__body">
+          A colleague picked up your phone while you were in a meeting.
+          Screen woke, PIN was attempted. You came back to a full
+          record — time, event type, and a photo of who did it.
+        </p>
+        <div class="scenario-card__triggers">
+          <span class="trigger-tag">Screen wake</span>
+          <span class="trigger-tag">Wrong PIN</span>
+        </div>
+      </article>
+
+      <article class="scenario-card fade-up">
+        <div class="scenario-card__icon">🛏</div>
+        <h3 class="scenario-card__title">Taken overnight</h3>
+        <p class="scenario-card__body">
+          Phone disappeared while you slept. A chain of events tells
+          the whole story: device picked up, charger connected elsewhere,
+          then successfully unlocked. Every step documented.
+        </p>
+        <div class="scenario-card__triggers">
+          <span class="trigger-tag">Device pickup</span>
+          <span class="trigger-tag">Charger connected</span>
+          <span class="trigger-tag">Successful unlock</span>
+        </div>
+      </article>
+
+      <article class="scenario-card fade-up">
+        <div class="scenario-card__icon">👨‍👩‍👧</div>
+        <h3 class="scenario-card__title">Kids &amp; family</h3>
+        <p class="scenario-card__body">
+          Your child picked up your phone while you were busy. The
+          successful unlock event with photo tells you exactly who
+          opened it and when — no confrontation needed.
+        </p>
+        <div class="scenario-card__triggers">
+          <span class="trigger-tag">Successful unlock</span>
+          <span class="trigger-tag">App login</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     CTA
+════════════════════════════════════════════════════════════ -->
+<section class="cta-section" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta-section__inner fade-up">
+      <p class="section-label" style="justify-content:center;">
+        Get started
+      </p>
+      <h2 class="section-title" id="cta-title">
+        Free to install.<br />Yours to keep.
+      </h2>
+      <p class="section-body">
+        Core features are completely free. No subscription. No account required.
+        Premium features — alarm, schedule, Drive sync — unlock with a single
+        one-time purchase, yours forever.
+      </p>
+
+      <a
+        href="https://play.google.com/store/apps/details?id=com.pocketguardian.app"
+        class="btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Download Pocket Guardian free on Google Play"
+      >
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true">
+          <polygon points="3,1 17,9 3,17"/>
+        </svg>
+        Download free on Google Play
+      </a>
+
+      <p style="margin-top:16px; font-size:0.82rem; color:var(--text-3);">
+        Android 8.0+ · No account needed · No subscription
+      </p>
+
+      <!-- Contact block -->
+      <div class="contact-block" role="complementary" aria-label="Contact information">
+        <p class="contact-block__label">Questions? Suggestions? Feedback?</p>
+        <a href="mailto:pocketguardian.app@gmail.com" class="contact-block__email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          pocketguardian.app@gmail.com
+        </a>
+        <p class="contact-block__hint">
+          We read every message — bug reports, feature requests,<br class="contact-br" />
+          partnership inquiries, or just to say hello.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <a href="index.html" class="footer__logo" aria-label="Pocket Guardian home">
+        <img src="assets/img/logo.png" alt="Pocket Guardian" width="26" height="26" onerror="this.style.display='none'" />
+        Pocket Guardian
+      </a>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="privacy-policy.md">Privacy Policy</a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.pocketguardian.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Google Play</a>
+        <a href="mailto:pocketguardian.app@gmail.com">Contact</a>
+        <a
+          href="https://github.com/pocketguardian/pocketguardian"
+          target="_blank"
+          rel="noopener noreferrer"
+        >GitHub</a>
+      </nav>
+      <p class="footer__copy">
+        &copy; <span id="footer-year">2026</span> Pocket Guardian. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
